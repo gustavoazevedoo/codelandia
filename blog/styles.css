@@ -1,0 +1,164 @@
+:root {
+  --blue: #3EA1DB;
+  --blue-dark: #574AE8;
+  --white: #FFF;
+
+  --title: #313131;
+  --text: #B6B6B6;
+  
+  --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background: rgb(241, 237, 237);
+}
+
+.container {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-image: var(--linear);
+  height: 250px;
+
+  padding: 0 20px;
+}
+
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header h2 {
+  margin: 40px 0 72px;
+  color: var(--white);
+}
+
+header .search-container {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  height: 65px;
+}
+
+header .search-container input {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  background: transparent;
+  outline: none;
+  color: var(--white);
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+header .search-container input::placeholder {
+  color: var(--white);
+}
+
+main {
+  padding: 0 20px;
+}
+
+.posts {
+  margin: 100px auto;
+}
+
+.post + .post {
+  margin-top: 50px;
+}
+
+.post {
+  padding: 24px;
+  background: var(--white);
+  box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
+  border-radius: 5px;
+}
+
+.post > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > div span {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.post h1 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: var(--title);
+  margin: 24px 0 8px;
+}
+
+.post p {
+  color: var(--text);
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 200px;
+  }
+
+  header .header h2 {
+    margin: 40px 0;
+    font-size: 18px;
+  }
+
+  header .search-container {
+    height: 40px;
+  }
+
+  header .search-container input {
+    font-size: 14px;
+  }
+
+  .posts {
+    margin: 50px auto;
+  }
+  
+  .post + .post {
+    margin-top: 25px;
+  }
+
+  .post > div span {
+    font-size: 14px;
+  }
+  
+  .post h1 {
+    font-size: 18px;
+  }
+  
+  .post p {
+    color: var(--text);
+  }
+}
