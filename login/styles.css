@@ -1,0 +1,188 @@
+/*Variáveis*/
+:root {
+  --green: #04c35c;
+  --blue: #2b6cb0;
+
+  --white: #ffffff;
+  --white300: #f7fafc;
+
+  --dark: #1a202c;
+  --input: #e8e8e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  background-color: var(--white300);
+  flex: 1;
+  padding: 0 20px;
+}
+
+aside figure {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside figure img {
+  width: 70%;
+}
+
+.login {
+  flex: 1;
+  padding: 80px 20px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login > p {
+  font-size: 16px;
+  margin-top: auto;
+}
+
+.login > p a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.form-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-container span {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: var(--dark);
+
+}
+
+.form-container h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: var(--dark);
+  margin-top: 8px;
+}
+
+.form-container form {
+
+  margin-top: 40px;
+  margin-bottom: auto;
+}
+
+.form-container form .form-group label {
+  font-size: 16px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.form-container form input {
+  height: 50px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: var(--dark);
+  border: 1px solid var(--input);
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group + .form-group {
+  margin-top: 16px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.separator a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.separator a,
+.remember-me label {
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me label {
+  margin-left: 8px;
+}
+
+form button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--green);
+
+  cursor: pointer;
+  transition: .2s;
+}
+
+form button:hover {
+  filter: brightness(80%);
+}
+
+form button.google {
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form button.google img {
+  margin-right: 16px;
+}
+
+form button + button {
+  margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+  aside {
+    display: none;
+  }
+
+  .login {
+    padding: 50px 20px 20px;
+  }
+}
